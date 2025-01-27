@@ -28,6 +28,7 @@ Monday
 - abstract and concrete classes
 - class inheritance
 - using slots
+  ...q why is __ arbitrary still working...?
 - name mangled members
 - property decorators
 - validate data types: isinstance, type, int(float())
