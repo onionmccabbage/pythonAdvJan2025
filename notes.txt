@@ -33,9 +33,11 @@ Monday
 > validate data types: isinstance, type, int(float())
 > override built-in methods: __eq__, __repr__
 > if __name__== '__main__'
+> typings can be useful during development (but NEVER at runtime)
 - after lunch review
 - functional programming: map, filter and reduce  
 - function parameters
+
 
 Tuesday
 - Loading local and remote data (requests)
