@@ -1,0 +1,23 @@
+from my_shape import Shape
+
+class Figure(Shape): # we now have all the fatures of the Shape class
+    def __init__(self, num_sides, colour, id):
+        super().__init__(num_sides, colour) # call the init of the parent class
+        self.id = id
+    @property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, id):
+        if isinstance(id, int):
+            self.__id = id
+        else:
+            raise TypeError('ID must be an integer')
+    # we may choose to override other methods of hte parent class
+    def __str__(self):
+        return f'This figure id:{self.id} has {self.num_sides} sides and is {self.colour}'
+
+if __name__ == '__main__':
+    fig1 = Figure(5, 'pink', 44)
+    print(fig1)
+
