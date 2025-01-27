@@ -2,7 +2,7 @@ from basic_classes import AbstractShape
 
 class Shape(AbstractShape):
     '''This shape will have a number of sides'''
-    __slots__ = ('__num_sides','__colour') # a tuple of permitted properties of this class
+    __slots__ = ('__num_sides','__colour')
     def __init__(self, num_sides, colour):
         '''This method is called every time we create an instance'''
         self.num_sides = num_sides # here we are calling the setter methods of this class
@@ -36,5 +36,9 @@ if __name__ == '__main__':
     # make an instance of our class
     triangle = Shape(3, 'blue')
     # attempt to add arbitrary property to our class
-    triangle.__best_before = 9 # this is an arbitrary property....
+    # triangle.best_before = 9 # this is an arbitrary property....
+    triangle.colour = True # defaults to 'white'
+    triangle.num_sides = -3 # throw exception
     print(triangle)
+    # we cannot directly access the name-mangled values
+    # print(triangle.__colour) # this fails

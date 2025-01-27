@@ -16,6 +16,7 @@ from abc import ABCMeta, abstractmethod
 class AbstractShape(metaclass=ABCMeta): # we now have an abstract class
     '''Abstraction means we can declare properties and methods
     that we will need to implement in concrete classes'''
+    __slots__ = ('__num_sides','__colour') # a tuple of permitted properties of this class
     @property # we may declare abstract properties
     @abstractmethod
     def num_sides(self, num_sides):
