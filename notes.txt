@@ -31,8 +31,8 @@ Monday
 > name mangled members
 > property decorators
 - validate data types: isinstance, type, int(float())
-- override built-in methods
-- if __name__== '__main__'
+- override built-in methods: __eq__, __repr__
+> if __name__== '__main__'
 - after lunch review
 - functional programming: map, filter and reduce  
 - function parameters

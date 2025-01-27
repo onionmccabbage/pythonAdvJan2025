@@ -32,6 +32,9 @@ class Shape(AbstractShape):
     def __str__(self):
         return f'this is my shape with {self.num_sides} sides, colour is {self.colour}'
 
+# Anything with leading and trailing double underscores is part of Python
+# __dunder__
+
 if __name__ == '__main__':
     print(f'This module is called {__name__}')
     # make an instance of our class
