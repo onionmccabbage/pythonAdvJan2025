@@ -31,6 +31,9 @@ class Shape(AbstractShape):
             self.__colour = 'white' # sensible default
     def __str__(self):
         return f'this is my shape with {self.num_sides} sides, colour is {self.colour}'
+    def __repr__(self):
+        '''__repr__ wil be invoked when representing this object in immediate mode Python'''
+        self.__str__()
 
 # Anything with leading and trailing double underscores is part of Python
 # __dunder__
