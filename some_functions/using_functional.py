@@ -17,4 +17,6 @@ if __name__ == '__main__':
         print(r)
     # using filter
     odds = filter(isOdd, e)
-    print(odds)
+    print(odds) # we have a filter object
+    odd_nums = [i for i in odds] # a quick way to et members of an iterable
+    print(odd_nums)
