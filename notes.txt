@@ -30,7 +30,7 @@ Monday
 > using slots
 > name mangled members
 > property decorators
-- validate data types: isinstance, type, int(float())
+> validate data types: isinstance, type, int(float())
 > override built-in methods: __eq__, __repr__
 > if __name__== '__main__'
 - after lunch review
