@@ -22,15 +22,14 @@ course website:
 Repo https://github.com/onionmccabbage/pythonAdvJan2025
 
 Monday
-- intro and welcome
+> intro and welcome
   - what do you currently know
   - what do you want to know 
-- abstract and concrete classes
-- class inheritance
-- using slots
-  ...q why is __ arbitrary still working...?
-- name mangled members
-- property decorators
+> abstract and concrete classes
+> class inheritance
+> using slots
+> name mangled members
+> property decorators
 - validate data types: isinstance, type, int(float())
 - override built-in methods
 - if __name__== '__main__'

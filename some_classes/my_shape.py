@@ -33,6 +33,7 @@ class Shape(AbstractShape):
         return f'this is my shape with {self.num_sides} sides, colour is {self.colour}'
 
 if __name__ == '__main__':
+    print(f'This module is called {__name__}')
     # make an instance of our class
     triangle = Shape(3, 'blue')
     # attempt to add arbitrary property to our class

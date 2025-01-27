@@ -26,3 +26,7 @@ class AbstractShape(metaclass=ABCMeta): # we now have an abstract class
         '''All objects in Python will use their __str__ method when being printed
         We may oerride __str__ to implement our own print routine'''
         pass
+
+if __name__ == '__main__':
+    # we may write exercise code here
+    print(f'This module is called {__name__}')
