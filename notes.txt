@@ -34,9 +34,10 @@ Monday
 > override built-in methods: __eq__, __repr__
 > if __name__== '__main__'
 > typings can be useful during development (but NEVER at runtime)
-- after lunch review
+> after lunch review
 - functional programming: map, filter and reduce  
 - function parameters
+- prep for Tuesday...
 
 
 Tuesday

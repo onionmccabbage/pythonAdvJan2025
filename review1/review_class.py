@@ -34,8 +34,11 @@ It is {self.findIfSquareNum()}''' # use the accessors
 if __name__ == '__main__':
     n = int(float(input('Enter a number: ')))
     r = NumberFun(n)
+    # can we assign additional arbitrary properties?
+    # r.__ooblywoobly = 'dumdedodeda'
     print(r)
+    # print(r.__ooblywoobly)
     # can we access name-mangled properties?
     # print( r.__num ) # fails
-    r.__n = 99
-    print(r.n)
+    # r.__n = 99
+    print(r.n) # calls the getter method of the class
