@@ -15,14 +15,20 @@ class Shape(AbstractShape):
     @num_sides.setter
     def num_sides(self, num_sides):
         # carry out validation
-        self.__num_sides = num_sides
+        if type(num_sides) == int and num_sides>0:
+            self.__num_sides = num_sides
+        else:
+            raise TypeError('Shapes must have a positive ineger number of sides')
     # we must implement a __str__ method
     @property
     def colour(self):
         return self.__colour
     @colour.setter
     def colour(self, colour):
-        self.__colour = colour
+        if type(colour)==str and colour != "":
+            self.__colour = colour
+        else:
+            self.__colour = 'white' # sensible default
     def __str__(self):
         return f'this is my shape with {self.num_sides} sides, colour is {self.colour}'
 
