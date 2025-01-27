@@ -15,8 +15,13 @@ from abc import ABCMeta, abstractmethod
 
 class AbstractShape(metaclass=ABCMeta): # we now have an abstract class
     '''Abstraction means we can declare properties and methods
-    that we willneed to implement in concrete classes'''
+    that we will need to implement in concrete classes'''
     @property # we may declare abstract properties
     @abstractmethod
     def num_sides(self, num_sides):
         pass # we make no implementation code within abstract
+    @abstractmethod
+    def __str__(self):
+        '''All objects in Python will use their __str__ method when being printed
+        We may oerride __str__ to implement our own print routine'''
+        pass
