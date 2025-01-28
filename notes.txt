@@ -54,8 +54,8 @@ Tuesday
 - Create, Read and Update (and Delete) - CRUD operations
 > populate db with sample data
 > read and nicely format values from the db
-- ask the user for input...
-- after lunch review exercise
+> ask the user for input...
+> after lunch review exercise
 - comprehensions, generators and yield
 
 Wednesday
