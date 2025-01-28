@@ -22,3 +22,7 @@ def readDB():
 if __name__ == '__main__':
     r = readDB()
     print(r, type(r))
+    # we may choose to iterate over the result
+    for animal in r:
+        #                                                       format float to 2dp
+        print(f'We have {animal[1]} {animal[0]} each costing {animal[2]:.2f}')
