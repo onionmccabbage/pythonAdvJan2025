@@ -7,7 +7,7 @@ def writeDB():
     # SQL statement
     st = '''
     INSERT INTO zoo
-    VALUES ("Penguin", 16, 0.52)
+    VALUES ("Penguin", 16, 0.52);
 ''' 
     try:
         curs.execute(st)

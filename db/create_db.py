@@ -11,7 +11,7 @@ def createDB():
         creature VARCHAR(32) PRIMARY KEY,
         count int,
         cost float
-    )
+    )l
 '''
     # execute the SQL statement
     try:

@@ -10,7 +10,7 @@ def customRead(w='r'):
     # WHERE creature LIKE "%{w}%" # finds anything containing...
     st = f'''
     SELECT creature, count, cost FROM zoo
-    WHERE creature LIKE "%{w}%"
+    WHERE creature LIKE "%{w}%";
 '''
     try:
         curs.execute(st)

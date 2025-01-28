@@ -7,7 +7,7 @@ def populateDB(creatures_t):
     curs = conn.cursor()
     st = '''
     INSERT INTO zoo
-    VALUES (?,?,?)'''
+    VALUES (?,?,?);'''
     # NB the ? allows us to inject validated members into the SQL statement
     # iterate over the tuple
     for item in creatures_t:
