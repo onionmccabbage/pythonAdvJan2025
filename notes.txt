@@ -98,7 +98,8 @@ Thursday
 
 
 
-- end of course feedbacks (internal)
+- end of course feedback
+  https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/58c3f77b-e03c-4abe-8978-474264bc93b9
 
 Other Useful Resources
 - https://pynative.com/python-exercises-with-solutions/
