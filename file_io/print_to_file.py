@@ -9,7 +9,7 @@ def printTofile():
     fout.close()
 
 # slightly more nuanced write to file (using 'with')
-def writeToFile(t):
+def writeToFile(t='default'): # of arguments are optional, they are keyword arguments
     ''' use a file access object to write text to a file'''
     try:
         with open('my_file.txt', 'at') as fout: # 'with' will close the asset when no longer needed
@@ -31,10 +31,14 @@ def readFromfile():
         print(err)
 
 # bytes
-def makeBytes(v):
+def makeBytes(v): # potitional argument are NOT optional
     '''convert the string v into bytes'''
-    b = bytes(v) # or b = b'{v}'
+    b = bytes(v, 'UTF8') # or b = b'{v}'
     return b
+
+# NB for truly optional arguments:
+# write a method that expeects *args and/or **kwargs
+# Se if tehre is anything in either collection and act accordingly
 
 # write bytes
 def writeBytesToFile(t):
@@ -54,8 +58,41 @@ def readBytesFromfile():
     except Exception as err:
         print(err)
 
+import json # this is part of the Python standard library
 
 # JSON
+def workWithJson():
+    '''Here is a tuple of dictionaries'''
+    creatures_t = ( # normally this comes from JSON or API etc.
+        {'creature':'Albatros', 'count':1,      'cost':120.99},
+        {'creature':'Bear',     'count':5,      'cost':323.56},
+        {'creature':'Carp',     'count':120,    'cost':87.00},
+        {'creature':'Deer',     'count':121,    'cost':12.99},
+        {'creature':'Elk',      'count':7,      'cost':73.47},
+    )  
+    # we may convert this structure to plain text
+    j = json.dumps(creatures_t) # serialize the structure to text
+    print(j, type(j))
+    # We can also covert correctly-formatted JSON back into a structure
+    s = json.loads(j)
+    print(s, type(s)) # list
+
+
+def seekContent(*args):
+    '''if there is a number in the 'args' tuple ,then see to that position
+    Otherwise return the whole file'''
+    if len(args)==0:
+        # there are no arguments passed in - return everything
+        r = readFromfile()
+        return r
+    elif len(args)==1:
+        try:
+            with(open('my_file.txt', 'rt')) as fin:
+                fin.seek(args[0], 2)
+                the_rest= fin.read()
+            return the_rest
+        except Exception as err:
+            print(err)
 
 
 if __name__ == '__main__':
@@ -65,3 +102,4 @@ if __name__ == '__main__':
     # print( readFromfile() )
     writeBytesToFile( makeBytes('hello from text to bytes') )
     print(type(readBytesFromfile()))
+    workWithJson()
