@@ -19,12 +19,41 @@ def writeToFile(t):
 # read from file
 def readFromfile():
     '''read back from a text file'''
-    fin = open('my_text.txt', 'rt')
-    t = fin.read()
-    fin.close()
-    return t
+    # fin = open('my_file.txt', 'rt')
+    # t = fin.read()
+    # fin.close()
+    # return t
+    try:
+        with open('my_file.txt', 'rt') as fin: # 'with' will close the asset when no longer needed
+            t = fin.read()
+        return t
+    except Exception as err:
+        print(err)
 
 # bytes
+def makeBytes(v):
+    '''convert the string v into bytes'''
+    b = bytes(v) # or b = b'{v}'
+    return b
+
+# write bytes
+def writeBytesToFile(t):
+    ''' use a file access object to write bytes to a file'''
+    try:
+        with open('my_file', 'ab') as fout: # 'with' will close the asset when no longer needed
+            fout.write(t)
+    except Exception as err:
+        print(err)
+# read bytes
+def readBytesFromfile():
+    '''read back from a byte file'''
+    try:
+        with open('my_file.txt', 'rb') as fin: # 'with' will close the asset when no longer needed
+            t = fin.read()
+        return t # we are return a byte object
+    except Exception as err:
+        print(err)
+
 
 # JSON
 
@@ -33,4 +62,6 @@ if __name__ == '__main__':
     '''exercise the code'''
     # printTofile()
     # writeToFile('will the weather improve ?')
-    print( readFromfile() )
+    # print( readFromfile() )
+    writeBytesToFile( makeBytes('hello from text to bytes') )
+    print(type(readBytesFromfile()))
