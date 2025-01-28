@@ -47,13 +47,14 @@ Tuesday
 - persisting files: read/write/append/exclusive/overwrite, text, bytes, json
 - 'with' operator for clean handling of assets
 - how to convert bytes back to string b'this is bytes'.decode()
-- databases
+> databases
     see https://wiki.python.org/moin/DatabaseProgramming
   also useful: add 'sqlite viewer' plugin to VSCode
-- other db connections
+> other db connections
 - Create, Read and Update (and Delete) - CRUD operations
-- populate db with sample data
-- read and nicely format values from the db
+> populate db with sample data
+> read and nicely format values from the db
+- ask the user for input...
 - after lunch review exercise
 - comprehensions, generators and yield
 

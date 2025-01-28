@@ -4,7 +4,7 @@ def customUpdate(w):
     '''Update matching rows in the DB'''
     count = int(float(w['count']))
     creature = w['creature']
-    conn = sqlite3.connect('my-db')
+    conn = sqlite3.connect('my_db')
     curs = conn.cursor()
     st = f'''
     UPDATE zoo
