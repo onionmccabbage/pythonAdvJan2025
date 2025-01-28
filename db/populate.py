@@ -18,7 +18,7 @@ def populateDB(creatures_t):
                 n = item['creature']
             else:
                 raise Exception('Creature name must be a string')
-            if type(item('count'))==int:
+            if type(item['count'])==int:
                 count = item['count']
             else:
                 raise Exception('Count must be an integer')
@@ -28,10 +28,11 @@ def populateDB(creatures_t):
                 raise Exception('Cost must be in or float')
             curs.execute(st, (n, count, cost))
             conn.commit()
-            conn.close()
             # if invalid...
         except Exception as err:
             print(f'{err}')
+    if conn: # it is possible the connection was never made
+        conn.close()
 
 if __name__ == '__main__':
     creatures_t = ( # normally this comes from JSON or API etc.
