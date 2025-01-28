@@ -1,3 +1,4 @@
+# NB the requests library wraps the older 'urllib3' library that is part of python
 import requests
 
 # remember - it is often a good idea to avoid putting anything in the global namespace
@@ -11,6 +12,11 @@ def getUsers():
     try:
         response = requests.get(apiURL) # here we make a request to the URL
         print(response.status_code)
+        print(response.raw) # or .text or .json or .html .xml etc.
+        # grab the JSON from the response
+        res_j = response.json() # the JSON text will be converted to a Python structure
+        # return the JSON as a Python structure
+        return res_j
     except Exception as err:
         print(f'There was a problem: {err}')
     finally:
@@ -20,7 +26,7 @@ def getUsers():
 def main():
     '''exercise the code'''
     r = getUsers()
-    print(r)
+    print(r, type(r))
 
 if __name__ == '__main__':
     main()
