@@ -35,6 +35,8 @@ def main():
     n = randNum()
     r = getUsers(n)
     print(r, type(r))
+    # we may access parts of the returned data structure
+    print(r['address']['geo']['lat'], r['address']['geo']['lng'])
 
 if __name__ == '__main__':
     main()
