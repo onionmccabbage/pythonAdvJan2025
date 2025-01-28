@@ -88,7 +88,8 @@ def seekContent(*args):
     elif len(args)==1:
         try:
             with(open('my_file.txt', 'rt')) as fin:
-                fin.seek(args[0], 2)
+                n = args[0]
+                fin.seek(n)
                 the_rest= fin.read()
             return the_rest
         except Exception as err:
@@ -103,3 +104,10 @@ if __name__ == '__main__':
     writeBytesToFile( makeBytes('hello from text to bytes') )
     print(type(readBytesFromfile()))
     workWithJson()
+    # call with no args
+    s = seekContent() # expect everything
+    print(s)
+    print('---------------------')
+    # call with one numberic arg
+    r = seekContent(32)
+    print(r)
