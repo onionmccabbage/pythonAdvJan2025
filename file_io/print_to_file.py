@@ -9,8 +9,20 @@ def printTofile():
     fout.close()
 
 # slightly more nuanced write to file (using 'with')
-
+def writeToFile(t):
+    ''' use a file access object to write text to a file'''
+    try:
+        with open('my_file.txt', 'at') as fout: # 'with' will close the asset when no longer needed
+            fout.write(t)
+    except Exception as err:
+        print(err)
 # read from file
+def readFromfile():
+    '''read back from a text file'''
+    fin = open('my_text.txt', 'rt')
+    t = fin.read()
+    fin.close()
+    return t
 
 # bytes
 
@@ -19,4 +31,6 @@ def printTofile():
 
 if __name__ == '__main__':
     '''exercise the code'''
-    printTofile()
+    # printTofile()
+    # writeToFile('will the weather improve ?')
+    print( readFromfile() )
