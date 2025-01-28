@@ -3,7 +3,7 @@ import requests
 from random import randint
 
 # remember - it is often a good idea to avoid putting anything in the global namespace
-apiURL = 'https://nonsense.typicode.com/users'
+apiURL = 'https://jsonplaceholder.typicode.com/users'
 
 
 def getUsers(n=1): # we should think about validating n
