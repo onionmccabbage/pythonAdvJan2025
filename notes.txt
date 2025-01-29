@@ -64,8 +64,8 @@ Wednesday
 > redirect stdout
 > context manager to switch context e.g. for handling data input and output
 > decorator syntax
-- networking server/client (microservices)
-- immediate mode Python
+> networking server/client (microservices)
+> immediate mode Python
   - any results are immediately show using __repr__ 
 - Testing: (only really works if there is a good spec')
   - doctest revisited

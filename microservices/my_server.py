@@ -9,7 +9,7 @@ def server():
     port_t = ('localhost', 9876)
     server.bind(port_t)
     # we need our server to listen for requests
-    server.listen()
+    server.listen(4) # NB we may include a 'backlog' integer
     print(f'Server is listening on {port_t[0]}:{port_t[1]}')
     # we need a run loop
     while True:
@@ -19,6 +19,10 @@ def server():
         # read the first few bytes of the client request object
         buf = client.recv(1024) # accept as much or as little as you like
         print(f'Server received {buf}') # NB the buffer contains encoded bytes
+        # write logic to handle requests for data
+        # e.g. API, Database, File....
+        
+        
         # if the buffer is 'quit' then terminate the server
         if buf == b'quit':
             break
