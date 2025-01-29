@@ -61,9 +61,9 @@ Wednesday
 > recordings....
   username: student password: Belfast2024
 > comprehensions, generators and yield
-- redirect stdout
-- context manager to switch context e.g. for handling data input and output
-- decorator syntax
+> redirect stdout
+> context manager to switch context e.g. for handling data input and output
+> decorator syntax
 - networking server/client (microservices)
 - immediate mode Python
   - any results are immediately show using __repr__ 
