@@ -103,6 +103,7 @@ Thursday
 
 - end of course feedback
   https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/58c3f77b-e03c-4abe-8978-474264bc93b9
+  https://apps.powerapps.com/play/17579985-153c-4727-b1f4-8b53e48b5e72?tenantId=92e84ceb-fbfd-47ab-be52-080c6b87953f&Type=ILT&ID=LZU1500681&OID=516135&Title=Advanced%20Python&Owner=Ankit%20Sayal
 
 Other Useful Resources
 - https://pynative.com/python-exercises-with-solutions/

@@ -1,4 +1,4 @@
-Review 3 1hr 20 mins 
+Review 3 1hr 20 mins unto 3:00
 ========
 if you wish, use microservices, DB, API, i/o context etc. within your work
 
@@ -8,6 +8,8 @@ Write a new server (a microservice) as a front-end to your database from yesterd
 The client should send requests for specific creatures, posts or todos and the server 
 responds by querying the database (or API) and returning a nicely formatted response about 
 that creature, post or todo
+
+use bytes.encode() also bytes.decode()
 
 Then find a way for the client to add or update members of the database
 (Work on one data-type first, such as creatures, then generalize for the others)

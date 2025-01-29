@@ -21,7 +21,8 @@ def server():
         print(f'Server received {buf}') # NB the buffer contains encoded bytes
         # write logic to handle requests for data
         # e.g. API, Database, File....
-        
+        # send something back from the server
+        client.send( buf.upper() )
         
         # if the buffer is 'quit' then terminate the server
         if buf == b'quit':

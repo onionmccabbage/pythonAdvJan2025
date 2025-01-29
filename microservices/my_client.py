@@ -17,6 +17,9 @@ def client():
     else:
         message = 'hello from the client'
     client.send(message.encode()) # we must ensure all comms are compatible
+    data = client.recv(1024)
+    print(f'Client received {data}')
+    client.close()
 
 
 if __name__ == "__main__":
