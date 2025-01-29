@@ -72,7 +72,8 @@ Wednesday
   see https://docs.python.org/3/library/doctest.html
   - unittest
   - pytest see https://docs.pytest.org/
-- after lunch lab exercise
+> after lunch lab exercise
+- Flask
 
 Thursday
 - profiling: timings etc. (cprofile)
