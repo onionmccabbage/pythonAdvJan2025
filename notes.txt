@@ -43,25 +43,27 @@ Monday
 Tuesday
 > Loading local and remote data (requests)
 > we will be using the 'requests' library for API calls
-- processing text/json
-- persisting files: read/write/append/exclusive/overwrite, text, bytes, json
-- 'with' operator for clean handling of assets
-- how to convert bytes back to string b'this is bytes'.decode()
+> processing text/json
+> persisting files: read/write/append/exclusive/overwrite, text, bytes, json
+> 'with' operator for clean handling of assets
+> how to convert bytes back to string b'this is bytes'.decode()
 > databases
     see https://wiki.python.org/moin/DatabaseProgramming
   also useful: add 'sqlite viewer' plugin to VSCode
 > other db connections
-- Create, Read and Update (and Delete) - CRUD operations
+> Create, Read and Update (and Delete) - CRUD operations
 > populate db with sample data
 > read and nicely format values from the db
 > ask the user for input...
 > after lunch review exercise
-- comprehensions, generators and yield
 
 Wednesday
-- decorator syntax
+- recordings....
+  username: student password: Belfast2024
+- comprehensions, generators and yield
 - redirect stdout
 - context manager to switch context e.g. for handling data input and output
+- decorator syntax
 - networking server/client (microservices)
 - immediate mode Python
   - any results are immediately show using __repr__ 
