@@ -5,8 +5,6 @@ import random
 # he best way to time code execution is the timeit library
 import timeit
 
-
-
 class SimpleClass(): # this class does NOT inherit from 'thread'
     def __init__(self):
         pass
@@ -16,13 +14,14 @@ class SimpleClass(): # this class does NOT inherit from 'thread'
         for _ in range(0,4):
             msg += f'{n} is sleeping'
             time.sleep(random.random()*0.5)
-        print(msg)
+        # try to avoid printing from a thread (or anything i/o bound)
+        # print(msg)
 
 def main():
     start = timeit.default_timer()
     thread_list = []
     cA = SimpleClass()
-    for _ in range(0,64):
+    for _ in range(0,16):
         '''append each new thread to a list of threads'''
         thread_list.append( Thread(target=cA, args=(_,)) )
     for item in thread_list:
