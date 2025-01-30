@@ -2,6 +2,11 @@ from threading import Thread
 import time
 import random
 
+# he best way to time code execution is the timeit library
+import timeit
+
+
+
 class SimpleClass(): # this class does NOT inherit from 'thread'
     def __init__(self):
         pass
@@ -10,19 +15,22 @@ class SimpleClass(): # this class does NOT inherit from 'thread'
         msg = ''
         for _ in range(0,4):
             msg += f'{n} is sleeping'
-            time.sleep(random.random()*0.2)
+            time.sleep(random.random()*0.5)
         print(msg)
 
 def main():
+    start = timeit.default_timer()
     thread_list = []
     cA = SimpleClass()
-    for _ in range(0,8):
+    for _ in range(0,64):
         '''append each new thread to a list of threads'''
         thread_list.append( Thread(target=cA, args=(_,)) )
     for item in thread_list:
         item.start()
     for item in thread_list:
         item.join()
+    end = timeit.default_timer()
+    print(f'Total execustion {end-start}')
 
 if __name__ =='__main__':
     main()
