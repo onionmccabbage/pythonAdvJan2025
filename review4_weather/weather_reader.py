@@ -1,8 +1,12 @@
 import json
 from weather import Weather
 
+# NB get plenty of result brefore frciding on actual time
+import timeit
+
+
 def main(city='athlone'):
-    fin = open(f'review3/data/{city}_weather.json', 'r')
+    fin = open(f'/data/{city}_weather.jreview4_weatherson', 'r')
     w = fin.read()
     w_dict = json.loads(w)
     desc = w_dict['weather'][0]['description']
@@ -20,5 +24,10 @@ def checkCity(c):
 
 if __name__ == '__main__':
     whichCity = input('Which city? ')
+    start=timeit.default_timer()
+    
     city = checkCity(whichCity)
     main(city)
+    end=timeit.default_timer()
+
+    print(f'Total time to retrieve weather reports {end-start}')
