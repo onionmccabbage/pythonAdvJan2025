@@ -13,9 +13,10 @@ class MyClass(Thread): # our class inherits everything from the Thread class
     # we override the 'run' ,ethod of the thread class
     def run(self):
         ''' When this thass is invoked the following code will run on a new thread'''
-        print(f'{self.n} is sleeping')
-        time.sleep(random.random()*3)
-        print(f'{self.n} no longer sleeping')
+        for _ in range(0,4):
+            print(f'{self.n} is sleeping')
+            time.sleep(random.random()*self.x)
+            print(f'{self.n} no longer sleeping')
 
 if __name__ == '__main__':
     print('on the main thread')
