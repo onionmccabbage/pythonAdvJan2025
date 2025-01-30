@@ -12,22 +12,30 @@ lock = threading.Lock()
 def workerA():
     ''' this worker will access the global xcounter and increment by one'''
     global counter
+    i = [] # this is NOT shared, so the lock ignores it
+    lock.acquire() # get exclusive access to any shared assets
     while counter <10:
         counter += 1
+        i.append(counter)
         print(f'Worker A sets count to {counter}')
+    print(i)
+    lock.release()
 
 def workerB():
     ''' this worker will access the global xcounter and decrement by one'''
     global counter
+    lock.acquire()
     while counter >-10:
         counter -= 1
         print(f'Worker B sets count to {counter}')
+    lock.release()
 
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=workerA)
     t2 = threading.Thread(target=workerB)
-    t1.start()
     t2.start()
+    t1.start()
     t1.join()
     t2.join()
+    print(f'main thread coninues {counter}')
