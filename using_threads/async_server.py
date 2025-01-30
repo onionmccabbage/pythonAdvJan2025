@@ -3,7 +3,7 @@ import asyncio
 async def handle_requests(reader, writer):
     data = await reader.read(1024)
     msg = data.decode()
-    addr = writer.get_extra_info('peerame')
+    addr = writer.get_extra_info('peername')
     print(f'Server received {msg} from {addr}')
     writer.close() # good practice
 
