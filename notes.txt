@@ -78,10 +78,10 @@ Wednesday
 
 Thursday
 - profiling: timings etc. (cprofile)
-- multithreading, also limits of mutlithreading concurrency
-  - class and function threads
-  - how threads are done
-  - concurrency and resources (lock shared resources)
+> multithreading, also limits of mutlithreading concurrency
+  > class and function threads
+  > how threads are done
+  > concurrency and resources (lock shared resources)
   - async await
   in Python we do not get true parallelism ...
 - the global Interpreter Lock (GIL) will affect threading performance
