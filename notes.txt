@@ -73,12 +73,13 @@ Wednesday
   > unittest
   > pytest see https://docs.pytest.org/
 > after lunch lab exercise
-- Flask is a lightweight web server
+> Flask is a lightweight web server
   (django is a full-fat web server)
 
 Thursday
 - profiling: timings etc. (cprofile)
 - multithreading, also limits of mutlithreading concurrency
+  - class and function threads
   - how threads are done
   - concurrency and resources (lock shared resources)
   - async await
